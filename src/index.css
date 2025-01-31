@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('/fonts/ChivoMono-VariableFont_wght.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --custom-red: #f13d3d;
+  --color-white-25: rgba(255, 255, 255, 0.25);
+}
+body {
+  font-family: 'ChivoMono', monospace;
+  button {
+    cursor: pointer;
+  }
+  min-width: 360px;
+  background-color: black;
+}
+
+@layer utilities {
+  .text-custom-red {
+    color: var(--custom-red);
+  }
+  .hover\:text-custom-red:hover {
+    color: var(--custom-red);
+  }
+
+  .bg-custom-red {
+    background-color: var(--custom-red);
+  }
+  .hover\:bg-custom-red:hover {
+    background-color: var(--custom-red);
+  }
+
+  .bg-white-25 {
+    background-color: var(--color-white-25);
+  }
+
+  .border-white-25 {
+    border-color: var(--color-white-25);
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply relative py-3 lg:px-8 text-white inline-block font-light;
+  }
+  .text-lightter {
+    @apply font-extralight;
+  }
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 16px;
+    height: 1px;
+    background-color: var(--custom-red);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  .nav-item:hover::after {
+    opacity: 1;
+  }
+}
