@@ -1,9 +1,9 @@
 {
-  "name": "vite-project",
+  "name": "morphis",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-"homepage": "https://nazarproton.github.io/evolve_ai/",
+  "homepage": "https://nazarproton.github.io/evolve_ai/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

@@ -2,73 +2,109 @@
 
 @font-face {
   font-family: 'ChivoMono';
-  src: url('/fonts/ChivoMono-VariableFont_wght.woff2') format('woff2');
+  src: url('/fonts/ChivoMono-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('/fonts/ChivoMono-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('/fonts/ChivoMono-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-white-25: rgba(255, 255, 255, 0.25);
+  --color-black: #000;
+  --color-red: #f13d3d;
 }
 
 :root {
   --custom-red: #f13d3d;
-  --color-white-25: rgba(255, 255, 255, 0.25);
 }
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'ChivoMono', monospace;
   button {
-    cursor: pointer;
+    cursor: pointer !important;
   }
   min-width: 360px;
   background-color: black;
 }
 
-@layer utilities {
-  .text-custom-red {
-    color: var(--custom-red);
-  }
-  .hover\:text-custom-red:hover {
-    color: var(--custom-red);
-  }
+.font-chivo-mono {
+  font-family: 'ChivoMono', monospace;
+  font-weight: normal;
+}
 
-  .bg-custom-red {
-    background-color: var(--custom-red);
-  }
-  .hover\:bg-custom-red:hover {
-    background-color: var(--custom-red);
-  }
+.font-chivo-mono-light {
+  font-family: 'ChivoMono', monospace;
+  font-weight: 300;
+}
 
-  .bg-white-25 {
-    background-color: var(--color-white-25);
-  }
+.font-chivo-mono-thin {
+  font-family: 'ChivoMono', monospace;
+  font-weight: 200;
+}
+.font-chivo-mono-thiner {
+  font-family: 'ChivoMono', monospace;
+  font-weight: 100;
+}
 
-  .border-white-25 {
-    border-color: var(--color-white-25);
+.nav-item {
+  @apply relative py-3 lg:px-8 text-white inline-block;
+}
+
+.nav-item {
+  position: relative;
+  font-weight: 300;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 16px;
+  height: 1px;
+  background-color: var(--custom-red);
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.soon::before {
+  content: 'soon';
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 400;
+  color: var(--custom-red);
+  font-size: 12px;
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-@layer components {
-  .nav-item {
-    @apply relative py-3 lg:px-8 text-white inline-block font-light;
-  }
-  .text-lightter {
-    @apply font-extralight;
-  }
-  .nav-item {
-    position: relative;
-  }
-
-  .nav-item::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    width: 16px;
-    height: 1px;
-    background-color: var(--custom-red);
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out;
-  }
-
-  .nav-item:hover::after {
-    opacity: 1;
-  }
+.spin-slow {
+  animation: rotate360 7s linear infinite;
 }

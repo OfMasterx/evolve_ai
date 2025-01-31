@@ -8,7 +8,7 @@ const FooterLinks = () => {
           viewBox="0 0 48 48"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-custom-red group-hover:text-white transition-colors"
+          className="text-red group-hover:text-white transition-colors"
         >
           <path d="M30.3263 13.9039H33.6998L26.3297 22.3274L35 33.7899H28.2112L22.894 26.838L16.8099 33.7899H13.4344L21.3174 24.78L13 13.9039H19.9611L24.7674 20.2583L30.3263 13.9039ZM29.1423 31.7707H31.0116L18.9454 15.8171H16.9395L29.1423 31.7707Z" />
         </svg>
@@ -20,7 +20,7 @@ const FooterLinks = () => {
           viewBox="0 0 48 48"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-custom-red group-hover:text-white transition-colors"
+          className="text-red group-hover:text-white transition-colors"
         >
           <path
             fillRule="evenodd"

@@ -33,22 +33,22 @@ const Navbar = () => {
   }, [menuOpen, scrollPosition]);
 
   return (
-    <nav className="flex relative justify-center items-center px-6 py-4 bg-black text-white">
+    <nav className="flex relative justify-center items-center px-6 py-8 bg-black text-white">
       <div className="flex justify-between items-center max-w-[1280px] min-[1920px]:max-w-[66.6vw] w-full">
         <Logo />
         <ul className="hidden lg:flex w-fit">
           <li>
-            <a href="#" className="nav-item">
+            <a href="#" className="nav-item soon">
               Explore
             </a>
           </li>
           <li>
-            <a href="#" className="nav-item">
+            <a href="#" className="nav-item soon">
               Create
             </a>
           </li>
           <li>
-            <a href="#" className="nav-item">
+            <a href="#" className="nav-item soon">
               Incubator
             </a>
           </li>
@@ -59,10 +59,10 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="hidden lg:flex">
-          <button className="px-4 py-3  hover:text-custom-red transition-colors">
+          <button className="px-4 py-3  hover:text-red transition-colors">
             BUY $MORPH
           </button>
-          <button className="bg-custom-red  hover:text-custom-red hover:bg-white px-4 py-2  transition-colors">
+          <button className="bg-red  hover:text-red hover:bg-white px-4 py-2  transition-colors">
             CONNECT WALLET{' '}
           </button>
         </div>
@@ -91,27 +91,27 @@ const Navbar = () => {
           className={`w-full flex flex-col justify-between h-full gap-8 pt-4`}
         >
           <li>
-            <a href="#" className="hover:text-custom-red">
+            <a href="#" className="hover:text-red">
               Explore
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-custom-red">
+            <a href="#" className="hover:text-red">
               Create
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-custom-red">
+            <a href="#" className="hover:text-red">
               Incubator
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-custom-red">
+            <a href="#" className="hover:text-red">
               Docs
             </a>
           </li>
           <li>
-            <button className=" px-4 py-2 w-full bg-custom-red hover:text-custom-red hover:bg-white transition-colors">
+            <button className="px-4 py-3 w-full bg-red hover:text-red hover:bg-white transition-colors">
               Connect Wallet
             </button>
           </li>
