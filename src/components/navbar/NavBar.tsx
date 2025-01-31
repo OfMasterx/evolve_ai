@@ -92,7 +92,7 @@ const Navbar = () => {
           />
         </div>
         <ul
-          className={`w-full flex flex-col h-[calc(100vh-176px-12px)] gap-8 pt-8`}
+          className={`w-full flex flex-col h-[calc(100dvh-176px-12px)] gap-8 pt-8`}
         >
           <li>
             <a href="#" className="hover:text-red relative soon-mobile">
