@@ -12,7 +12,7 @@ const HeadTextBlock = () => {
       </h1>
       <div className="flex md:w-full justify-center md:justify-end pr-0 md:pr-[25%] lg:pr-0">
         <button className="relative mt-32 px-6 py-3 text-white group whitespace-nowrap">
-          APPLY FOR EARLY ACCESS.
+          APPLY FOR EARLY ACCESS
           <span className="absolute top-0 right-0 w-6 h-[1px] bg-red transition-all group-hover:w-4"></span>
           <span className="absolute top-0 right-0 h-6 w-[1px] bg-red transition-all group-hover:h-4"></span>
         </button>
