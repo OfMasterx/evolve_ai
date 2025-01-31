@@ -13,7 +13,7 @@ const Landing = () => {
           <HeadTextBlock />
           <div className="w-1/12"></div>
           <SplineElement />
-          <div className="w-1/12"></div>
+          <div className="w-1/12 "></div>
         </div>
         <Phases />
       </div>
