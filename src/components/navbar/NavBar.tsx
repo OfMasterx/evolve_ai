@@ -59,7 +59,11 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="hidden lg:flex">
-          <button className="px-4 py-3  hover:text-red transition-colors">
+          <button
+            style={{ cursor: 'not-allowed' }}
+            disabled
+            className="px-4 py-3 relative text-white/25 cursor-not-allowed transition-colors"
+          >
             BUY $MORPH
           </button>
           <button className="bg-red  hover:text-red hover:bg-white px-4 py-2  transition-colors">
@@ -75,11 +79,11 @@ const Navbar = () => {
       ></div>
 
       <div
-        className={`fixed w-full ${
-          menuOpen ? '-top-2' : '-top-100'
-        } left-0 z-20 bg-black text-white space-y-4 p-6 transition-all duration-[0.6s] ease-in-out`}
+        className={`fixed w-full h-screen ${
+          menuOpen ? 'top-0' : '-top-[100%]'
+        } left-0 z-20 bg-black text-white space-y-4 px-6 py-8 transition-all duration-[0.6s] ease-in-out`}
       >
-        <div className="flex justify-between items-center max-w-[1280px] w-full">
+        <div className="flex justify-between items-center w-full">
           <Logo />
           <BurgerButton
             setMenuOpen={setMenuOpen}
@@ -88,20 +92,20 @@ const Navbar = () => {
           />
         </div>
         <ul
-          className={`w-full flex flex-col justify-between h-full gap-8 pt-4`}
+          className={`w-full flex flex-col h-[calc(100vh-176px-12px)] gap-8 pt-8`}
         >
           <li>
-            <a href="#" className="hover:text-red">
+            <a href="#" className="hover:text-red relative soon-mobile">
               Explore
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-red">
+            <a href="#" className="hover:text-red relative soon-mobile">
               Create
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-red">
+            <a href="#" className="hover:text-red relative soon-mobile">
               Incubator
             </a>
           </li>
@@ -110,12 +114,15 @@ const Navbar = () => {
               Docs
             </a>
           </li>
-          <li>
-            <button className="px-4 py-3 w-full bg-red hover:text-red hover:bg-white transition-colors">
-              Connect Wallet
-            </button>
+          <li className="pt-8">
+            <a href="#" className="hover:text-red relative soon-mobile">
+              BUY $MORPH
+            </a>
           </li>
         </ul>
+        <button className="px-4 py-3 w-full bg-red hover:text-red hover:bg-white transition-colors">
+          Connect Wallet
+        </button>
       </div>
     </nav>
   );

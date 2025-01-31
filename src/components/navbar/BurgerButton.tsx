@@ -11,8 +11,8 @@ const BurgerButton = ({
 }) => {
   return (
     <button
-      className={`relative lg:hidden w-6 h-6  flex items-center justify-center ${
-        isInBurger ? 'z-20' : ''
+      className={`relative  w-6 h-6  flex items-center justify-center ${
+        isInBurger ? 'z-20' : 'lg:hidden'
       }`}
       onClick={() => setMenuOpen(!menuOpen)}
     >
