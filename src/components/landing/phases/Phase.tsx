@@ -8,12 +8,13 @@ interface PhaseProps {
 }
 
 const Phase: React.FC<PhaseProps> = ({ title, info, description, index }) => {
+  const imageUrl = `${import.meta.env.BASE_URL}phases/phase${index}.svg`;
   if (isMobile) {
     return (
       <div className="h-fit min-h-full bg-black w-full text-white flex flex-col p-8">
         <div className="flex w-full justify-end items-end">
           <img
-            src={`/phases/phase${index}.svg`}
+            src={imageUrl}
             alt="Arrow"
             className="w-16 h-16 group-hover:rotate-180 transition-all duration-500"
           />
@@ -30,7 +31,7 @@ const Phase: React.FC<PhaseProps> = ({ title, info, description, index }) => {
       <div className="absolute p-8 group-hover:-top-[126px] top-0 left-0 group-hover:bg-white-25 w-full h-full transition-all duration-300">
         <div className="flex justify-end items-end">
           <img
-            src={`/phases/phase${index}.svg`}
+            src={imageUrl}
             alt="Arrow"
             className="w-16 h-16 group-hover:rotate-180 transition-all duration-300"
           />
