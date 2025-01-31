@@ -80,7 +80,7 @@ const Navbar = () => {
 
       <div
         className={`fixed w-full h-screen ${
-          menuOpen ? 'top-0' : '-top-[100%]'
+          menuOpen ? 'top-0' : '-top-[130%]'
         } left-0 z-20 bg-black text-white space-y-4 px-6 py-8 transition-all duration-[0.6s] ease-in-out`}
       >
         <div className="flex justify-between items-center w-full">
