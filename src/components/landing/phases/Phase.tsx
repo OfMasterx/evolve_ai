@@ -29,7 +29,7 @@ const Phase: React.FC<PhaseProps> = ({ title, info, description, index }) => {
   }
 
   return (
-    <div className="h-[218px] bg-black w-full text-center group overflow-hidden relative text-white">
+    <div className="h-[218px] bg-black w-full group overflow-hidden relative text-white">
       <div className="absolute p-8 group-hover:-top-[126px] top-0 left-0 w-full h-full transition-all duration-300">
         <div className="flex justify-end items-end">
           <img
@@ -39,9 +39,9 @@ const Phase: React.FC<PhaseProps> = ({ title, info, description, index }) => {
           />
         </div>
         <div className="flex flex-col items-start pt-[30px]">
-          <a className="text-start font-chivo-mono-thiner text-2xl leading-[30px] group-hover:opacity-0 transition-all duration-300">
+          <p className="text-start font-chivo-mono-thiner text-2xl leading-[30px] group-hover:opacity-0 transition-all duration-300">
             {title}
-          </a>
+          </p>
           <p className="text-start text-2xl lg:text-xl leading-[30px] min-[1170px]:text-2xl whitespace-nowrap">
             {info}
           </p>
