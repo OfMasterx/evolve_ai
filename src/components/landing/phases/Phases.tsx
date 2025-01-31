@@ -5,25 +5,25 @@ const phasesData = [
     title: 'PHASE 1:',
     info: 'DATA GATHERING',
     description:
-      'Feed data to the agent. Everything from personality, opinion on various subjects, random scenarios reactions, goals to fulfill and of course, create its voice.',
+      'Curate datasets to define agent behavior: personality matrices, scenario responses, and voice synthesis. Fine-tune decision trees with structured or unstructured inputs.',
   },
   {
     title: 'PHASE 2:',
-    info: 'INTERNAL TESTING',
+    info: 'TESTING',
     description:
-      "As any new product, AI agents require thorough testing before being released to the public. You will have a closed-environment to test your agent's behavior.",
+      'Simulate agent behavior in a sandbox environment—stress-test responses, audit for bias, and validate logic before releasing it to real-world platforms.',
   },
   {
     title: 'PHASE 3:',
-    info: 'INCUBATION',
+    info: 'DEPLOYMENT',
     description:
-      'We help you launch your socials, add other tech stacks and design tokenomics.',
+      'Connect your agent to X (Twitter), Zoom, or custom APIs. Monitor its autonomous execution via real-time dashboards and performance analytics.',
   },
   {
     title: 'PHASE 4:',
     info: 'TOKENIZATION',
     description:
-      'Once you are happy and ready to release your new creation to the world.',
+      'Mint an ERC-20/SPL token for your agent. Design tokenomics, deploy liquidity pools, and let token holders govern its evolution.',
   },
 ];
 
