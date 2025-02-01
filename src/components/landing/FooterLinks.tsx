@@ -13,7 +13,11 @@ const FooterLinks = () => {
           <path d="M30.3263 13.9039H33.6998L26.3297 22.3274L35 33.7899H28.2112L22.894 26.838L16.8099 33.7899H13.4344L21.3174 24.78L13 13.9039H19.9611L24.7674 20.2583L30.3263 13.9039ZM29.1423 31.7707H31.0116L18.9454 15.8171H16.9395L29.1423 31.7707Z" />
         </svg>
       </a>
-      <a href="/" className="group">
+      <a
+        target="_blank"
+        href="https://t.me/+KGisj248CtEwNTU0"
+        className="group"
+      >
         <svg
           width="48"
           height="48"
