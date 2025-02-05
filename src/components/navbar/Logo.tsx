@@ -1,6 +1,9 @@
 const Logo = () => {
   return (
-    <div className="text-xl font-bold flex justify-center items-center gap-[14px]">
+    <a
+      href="/"
+      className="text-xl font-bold flex justify-center items-center gap-[14px]"
+    >
       <svg
         width="48"
         height="48"
@@ -79,7 +82,7 @@ const Logo = () => {
           fill="white"
         />
       </svg>
-    </div>
+    </a>
   );
 };
 

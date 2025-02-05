@@ -34,10 +34,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'ChivoMono', monospace;
+  font-size: 16px;
   button {
     cursor: pointer;
   }
-  min-width: 320px;
+  min-width: 360px;
+  min-height: 360px;
   background-color: black;
 }
 

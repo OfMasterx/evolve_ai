@@ -6,7 +6,6 @@ const SplineElement = lazy(() => import('./SplineElement'));
 
 const Landing = () => {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  console.log(isSafari);
 
   return (
     <div className="bg-black text-white w-full px-6 flex flex-col items-center">
