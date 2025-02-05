@@ -1,4 +1,5 @@
 import Spline from '@splinetool/react-spline';
+import { isMobile } from 'react-device-detect';
 
 const SplineElement = () => {
   return (
@@ -9,6 +10,11 @@ const SplineElement = () => {
         className={`sm:min-w-[406px] `}
         scene="https://prod.spline.design/moDxSU2YolLqofps/scene.splinecode"
       />
+      <div
+        className={`absolute inset-0 ${
+          isMobile ? 'block' : 'hidden'
+        } bg-white opacity-0 transition-opacity duration-300 ease-out rounded-full`}
+      ></div>
     </div>
   );
 };
