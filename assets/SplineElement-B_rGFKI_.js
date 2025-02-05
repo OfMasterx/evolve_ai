@@ -1,1 +1,0 @@
-import{j as e}from"./index-BhAU7ZpK.js";import{C as s}from"./react-spline-XuhtjX1t.js";const n=()=>e.jsx("div",{className:"flex relative justify-center items-center min-[640px]:mt-0 mt-8 z-10 w-full lg:w-1/3  h-[406px]",children:e.jsx(s,{className:"sm:min-w-[406px] ",scene:"https://prod.spline.design/moDxSU2YolLqofps/scene.splinecode"})});export{n as default};
