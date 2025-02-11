@@ -1,0 +1,55 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main   # Adjust if your default branch is different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository.
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # 2. Setup Node.js (using Node v18 in this example).
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Install dependencies.
+      - name: Install Dependencies
+        run: npm install
+
+      # 4. Build the project.
+      - name: Build
+        run: npm run build
+
+      # 5. Copy the build output to the EC2 server.
+      - name: Copy Files to EC2
+        uses: appleboy/scp-action@v0.1.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          source: "dist/*"
+          target: "${{ secrets.EC2_DEPLOY_PATH }}"  # e.g., /var/www/morphis
+
+      # Runs remote commands to update the server.
+      - name: Restart App on EC2
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            cd ${{ secrets.EC2_DEPLOY_PATH }}
+            # For example, if you're using PM2 to manage your Node app:
+            # pm2 reload all || true
+            # OR, if you're serving static files with Nginx, reload it:
+            sudo systemctl reload nginx
